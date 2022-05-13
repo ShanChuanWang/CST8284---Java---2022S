@@ -1,3 +1,4 @@
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
@@ -13,22 +14,25 @@ import java.util.Scanner;
  * @since May 13, 2022
  */
 
-public class Lab01 {
+public class Wang {
     /**
      * This is the main method which makes use of result method.
      * @param args unused.
      * @return nothing.
      */
     public static void main(String[] args) {
-        Lab01 lab = new Lab01();
+        Wang lab = new Wang();
         Scanner scanner = new Scanner(System.in);
-        String studentName = "Shuai Wang"; //student's name
+        String studentName; //student's name
         /**
          * use String just in case if the student number starts
          * from 0.
          */
         String studentNumber;
+        String reasons;
 
+        System.out.print("Please enter your name: ");
+        studentName = scanner.nextLine();
         System.out.print("Please enter your student number: ");
         studentNumber = scanner.nextLine();
 
@@ -40,6 +44,10 @@ public class Lab01 {
         System.out.println("Your name is: " + studentName);
         System.out.println("Your student number is: " + studentNumber);
         System.out.println(lab.result(realStudentNumber));
+
+        System.out.println("Two reasons why you are taking this course:");
+        reasons = scanner.nextLine();
+        System.out.println(reasons);
 
     }
 
@@ -55,7 +63,7 @@ public class Lab01 {
         String secondString;
         if (realStudentNumber % 2 == 0) {
             firstString = "Your student number is odd.";
-            secondString = "The remaining weeks are: " + calculateWeeks();
+            secondString = "the remaining weeks till the end of your program: " + calculateWeeks();
 
         } else {
             firstString = "Your student number is even.";
