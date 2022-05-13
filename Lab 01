@@ -1,0 +1,90 @@
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+/**
+ * The Lab01 program simply shows the student's name, student number
+ * by asking student to input the number, and calculate the remaining weeks
+ * if the student number ood and the remaining months if the student number
+ * is odd.
+ *
+ * @author Shuai Wang
+ * @version 1.0
+ * @since May 13, 2022
+ */
+
+public class Lab01 {
+    /**
+     * This is the main method which makes use of result method.
+     * @param args unused.
+     * @return nothing.
+     */
+    public static void main(String[] args) {
+        Lab01 lab = new Lab01();
+        Scanner scanner = new Scanner(System.in);
+        String studentName = "Shuai Wang"; //student's name
+        /**
+         * use String just in case if the student number starts
+         * from 0.
+         */
+        String studentNumber;
+
+        System.out.print("Please enter your student number: ");
+        studentNumber = scanner.nextLine();
+
+        /**
+         * converter string to int
+         */
+        int realStudentNumber = Integer.parseInt(studentNumber);
+
+        System.out.println("Your name is: " + studentName);
+        System.out.println("Your student number is: " + studentNumber);
+        System.out.println(lab.result(realStudentNumber));
+
+    }
+
+    /**
+     * This method outputs different results depending on if the student number is
+     * odd or even. calculateWeeks method and calculateMonths method are used
+     * inside the result method.
+     * @param realStudentNumber is the parameter to result method.
+     * @return string returns the 2 strings.
+     */
+    public String result(int realStudentNumber) {
+        String firstString;
+        String secondString;
+        if (realStudentNumber % 2 == 0) {
+            firstString = "Your student number is odd.";
+            secondString = "The remaining weeks are: " + calculateWeeks();
+
+        } else {
+            firstString = "Your student number is even.";
+            secondString = "The remaining months are: " + calculateMonths();
+        }
+        return firstString + "\n" + secondString;
+    }
+
+    /**
+     * This method is used to calculate the remaining weeks from
+     * the start of the date to the end of the date.
+     * @return int returns the value of remaining weeks.
+     */
+    public int calculateWeeks(){
+        LocalDate startDate = LocalDate.now();
+        LocalDate endDate = LocalDate.of(2022,5,21);
+        long dateDifference = ChronoUnit.DAYS.between(startDate,endDate);
+        int remainingWeeks = (int) (dateDifference/7) - 1;
+        return remainingWeeks;
+    }
+
+    /**
+     * This method is used to calculate the remaining months from
+     * the start of the month to the end of the year.
+     * @return int returns the value of remaining months.
+     */
+    public int calculateMonths() {
+        LocalDate startMonth = LocalDate.now();
+        int remainingMonths = 12 - startMonth.getMonthValue() + 1;
+        return remainingMonths;
+    }
+}
