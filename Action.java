@@ -1,48 +1,53 @@
-
-
-/**
-This is the Action Superclass class that provides a catalog of actions to be carried out in view of COVID-19 OPH protocols.
-You are required to complete read and review this code to appropriately fill the required loopholes.
-*/
-public class Action
-{
-private String description;
+package CST8284_301_Assignment1;
 
 /**
-   Constructs an action without a description.
-*/
-public Action()
-{
-   description = "";
-}
+ * This is the Action Superclass class that provides a catalog of actions
+ * to be carried out in view of COVID-19 OPH protocols.
+ * You are required to complete read and review this code to appropriately fill the required loopholes.
+ */
+public abstract class Action {
+   private String description;
 
-/**
-   Sets the description of this action.
-   @param description the text description of the action
-*/
-public void setDescription(String description)
-{
-   this.description = description;
-}
+   /**
+    * Constructs an action without a description.
+    */
+   public Action() {
+      description = "";
+   }
 
-/**
-   Determines if this action occurs on the specified date.
-   @param year the year
-   @param month the month
-   @param day the day
-   @return true if the action activity occurs on the specified date.
-*/
+   /**
+    * Sets the description of this action.
+    * @param description the text description of the action
+    */
 
-/**
-YOUR TASK - TO DO: Write your abstract method named occursOn() here.
-*/
+   void setDescription(String description) {
+      this.description = description;
+   }
 
-/**
-   Converts action activity to string description.
-*/
-public String toString()
-{
-   return description;
-}
+   /**
+    * Determines if this action occurs on the specified date.
+    * @param year the year
+    * @param month the month
+    * @param day the day
+    * @return true if the action activity occurs on the specified dates
+    */
+
+   /**
+    * YOUR TASK - TO DO: Write your abstract method named occursOn() here.
+    */
+
+   public abstract void occursOn (int year, int month, int day);
+
+   /**
+    * Converts action activity to string description.
+    */
+   public String toString()
+   {
+      return description;
+   }
+
+//   public void resultCheck() {
+//
+//   }
 }
 
