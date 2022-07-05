@@ -1,49 +1,42 @@
-package CST8284_301_Assignment1;
+package assignment1.Action.sec301;
 
 import java.lang.reflect.Field;
 
+/**
+ * This is the ActionDriver2 class for this program.
+ * This means that it just runs the application with a method main.
+ *
+ * @author Shuai Wang
+ * @version 1.0
+ * @since Jun 13, 2022
+ */
 public class ActionDriver2 {
+    /**
+     * Reflection is used to in this method to exam if the occasionalAction class and
+     * rareAction class are the subclass of Action class and have extra fields.
+     * @param args Command line arguments are not used by this program.
+     * @throws Exception if class is not found.
+     */
+    public static void main(String[] args) throws Exception {
+        Class<?> occasionalActionClass = Class.forName("assignment1.Action.sec301.OccasionalAction");
+        Class<?> occasionalActionSuperClass = occasionalActionClass.getSuperclass();
+        Class<?> rareActionClass = Class.forName("assignment1.Action.sec301.RareAction");
+        Class<?> rareActionSuperClass = rareActionClass.getSuperclass();
 
-    public static void main(String[] args) throws Exception{
-        Class occasionalActionClass = Class.forName("CST8284_301_Assignment1.OccasionalAction");
-        Class occasionalActionSuperClass = occasionalActionClass.getSuperclass();
-        Class rareActionClass = Class.forName("CST8284_301_Assignment1.RareAction");
-        Class rareActionSuperClass = rareActionClass.getSuperclass();
+        System.out.println("OccasionalAction is subclass of Action: " +(occasionalActionSuperClass == Action.class));
+        System.out.println("Expected: true");
 
-        if (occasionalActionSuperClass == Action.class) {
-            System.out.println("OccasionalAction is subclass of Action: true");
-            System.out.println("Expected: true");
-        } else {
-            System.out.println("Error message");
-        }
+        System.out.println("RareAction is subclass of Action: " + (rareActionSuperClass == Action.class));
+        System.out.println("Expected: true");
 
-        if (rareActionSuperClass == Action.class) {
-            System.out.println("RareAction is subclass of Action: true");
-            System.out.println("Expected: true");
-        } else {
-            System.out.println("Error message");
-        }
+        Field[] occasionalActionFields = occasionalActionClass.getFields();
 
-        Field[] occasionActionFields = occasionalActionClass.getFields();
-        if (occasionActionFields.length == 0) {
-            System.out.println("OccasionalAction have no extra fields: true");
-            System.out.println("Expected: true");
-        }
+        System.out.println("OccasionalAction have no extra fields: " + (occasionalActionFields.length == 0));
+        System.out.println("Expected: true");
 
         Field[] rareActionFields = occasionalActionClass.getFields();
-        if (rareActionFields.length == 0) {
-            System.out.println("RareAction have no extra fields:true");
-            System.out.println("Expected: true");
-        }
 
-//        RegularAction regularAction = new RegularAction();
-//        Method occursOn = occasionalActionClass.getDeclaredMethod("occursOn", int.class, int.class, int.class);
-//        String expectedAction = "Wash your hands";
-//        System.out.print("Looking at regular actions: ");
-//        occursOn.invoke(regularAction, 2018, 12, 20);
-//        System.out.println("Expected: " + expectedAction);
-//        System.out.println("true");
-//        System.out.println("Expected: true");
-
+        System.out.println("RareAction have no extra fields: " + (rareActionFields.length == 0));
+        System.out.println("Expected: true");
     }
 }
