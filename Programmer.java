@@ -1,54 +1,63 @@
 
-package polylab;
+package CST8284_301_Lab6;
 
 
 //Programmer abstract superclass.
 
-public abstract class Programmer  {
-private final String firstName;
-private final String lastName;
-private final String socialSecurityNumber;
+public abstract class Programmer {
+    private final String firstName;
+    private final String lastName;
+    private final String socialSecurityNumber;
+    private String birthDate;
 
-//constructor
-public Programmer(String firstName, String lastName, 
-String socialSecurityNumber, int month, int year) {
-this.firstName = firstName;                                    
-this.lastName = lastName;                                    
-this.socialSecurityNumber = socialSecurityNumber;         
-} 
+    //constructor
+    public Programmer(String firstName, String lastName,
+    String socialSecurityNumber, int month, int year) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.socialSecurityNumber = socialSecurityNumber;
+    birthDate = month + "/" + year;
+    }
 
-//return first name
+    //return first name
+    //TO DO: INSERT YOUR CODE HERE
+    public String getFirstName() {
+        return firstName;
+    }
 
-//TO DO: INSERT YOUR CODE HERE
+    //return last name
+    //TO DO: INSERT YOUR CODE HERE
+    public String getLastName() {
+        return lastName;
+    }
+
+    //return social security number
+    //TO DO: INSERT YOUR CODE HERE
+    public String getSocialSecurityNumber() {
+        return socialSecurityNumber;
+    }
+
+    //return birth date
+    //TO DO: INSERT YOUR CODE HERE
 
 
-//return last name
+    public String getBirthDate() {
+        return birthDate;
+    }
 
-//TO DO: INSERT YOUR CODE HERE 
+    //return String representation of Programmer object
+    @Override
+    public String toString() {
+    return String.format("%s %s\n%s: %s\n%s: %s",
+      getFirstName(), getLastName(),
+      "social security number", getSocialSecurityNumber(),
+      "birth month and year", getBirthDate());
+    }
 
-
-//return social security number
-
-//TO DO: INSERT YOUR CODE HERE
-
-
-//return birth date  // 
-
-//TO DO: INSERT YOUR CODE HERE
-
-
-//return String representation of Programmer object
-@Override
-public String toString() {
-return String.format("%s %s\n%s: %s\n%s: %s", 
-  getFirstName(), getLastName(), 
-  "social security number", getSocialSecurityNumber(), 
-  "birth month and year", getBirthDate());
-} 
-
-/**abstract method must be overridden by concrete subclasses */
-
-public abstract double earnings(); 
+    /**
+     * abstract method must be overridden by concrete subclasses
+     */
+    public abstract double earnings();
 } 
 
 
