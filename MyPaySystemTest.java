@@ -6,6 +6,8 @@ import java.util.Scanner; /** This program uses Scanner to obtain user input */
 
 public class MyPaySystemTest {
     public static void main(String[] args) {
+        int month;
+        int year;
         // create subclass objects
         SalariedProgrammer salariedProgrammer = new SalariedProgrammer(
             "Emmanuel", "Okoro", "123-11-4567", 6, 1992, 500.00);
@@ -22,14 +24,13 @@ public class MyPaySystemTest {
             salariedProgrammer, "earned", salariedProgrammer.earnings());
         System.out.printf("%s\n%s: $%,.2f\n\n",
             hourlyProgrammer, "earned", hourlyProgrammer.earnings());
-        System.out.printf("%s\n%s: $%,.2f\n\n",
+        System.out.printf("commission programmer: %s\n%s: $%,.2f\n\n",
             commissionProgrammer, "earned", commissionProgrammer.earnings());
         System.out.printf("%s\n%s: $%,.2f\n\n",
             basePlusCommissionProgrammer,
             "earned", basePlusCommissionProgrammer.earnings());
 
         /** create and initialize the programmer array */
-
 
         // TO DO: COMPLETE THIS PORTION. INSERT YOUR OWN CODE:
         // create the Programmer array elements as required.
@@ -38,12 +39,15 @@ public class MyPaySystemTest {
         //START
         //INSERT CODE
         //END
-
+        Programmer[] programmer = new Programmer[4];
 
        //IMPLEMENT THE USE OF A SCANNER TO GET THE CURRENT MONTH. COMPLETE THIS PORTION!!!!
        //START
        //INSERT SCANNER CODE
        //END
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the current month (1 - 12): ");
+        month = scanner.nextInt();
 
         //TO DO: GET AND VALIDATE THE CURRENT MONTH. COMPLETE THIS PORTION!!!!
         //START
@@ -69,12 +73,13 @@ public class MyPaySystemTest {
                   programmers.getBaseSalary());
             }
 
-            // TO DO: COMPLETE THIS PORTION: if this is the month of the programmer's birthday, add $500 to his salary
+            // TO DO: COMPLETE THIS PORTION: if this is the month of the programmer's birthday,
+            // add $500 to his salary
             // otherwise just state what this programmer currently earned.
 
             //START
-            // INSERT CODE
-            // END
+            //INSERT CODE
+            //END
          }
 
          // get type name of each object in programmers array

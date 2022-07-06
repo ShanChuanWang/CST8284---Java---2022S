@@ -70,6 +70,14 @@ public class HourlyProgrammer extends Programmer {
 
   //return String representation of HourlyProgrammer object
   @Override
+  public String toString() {
+    String result = "hourly programmer: ";
+    result += super.toString();
+    result += String.format ("\nhourly wage: $%,.2f; hours worked: %.2f",
+            + getWage(), getHours());
+    return result;
+
+  }
 
   //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.
   //START

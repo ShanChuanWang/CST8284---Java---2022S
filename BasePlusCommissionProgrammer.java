@@ -42,6 +42,12 @@ public class BasePlusCommissionProgrammer extends CommissionProgrammer{
 
   //return String representation of BasePlusCommissionProgrammer object
   @Override
+  public String toString() {
+    String result = "base-salaried commission programmer: ";
+    result += super.toString();
+    result += String.format("; base salary: $%.2f", getBaseSalary());
+    return result;
+  }
 
   //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.
   //START

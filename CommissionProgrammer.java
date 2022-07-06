@@ -3,7 +3,7 @@ package CST8284_301_Lab6;
 //CommissionProgrammer.java
 //CommissionProgrammer class extends Programmer.
 
-public class CommissionProgrammer extends Programmer { 
+public class CommissionProgrammer extends Programmer {
   private double grossSales; // gross weekly sales
   private double commissionRate; // commission percentage
 
@@ -62,9 +62,17 @@ public class CommissionProgrammer extends Programmer {
   return getCommissionRate() * getGrossSales();
   }
 
+
+
   //return String representation of CommissionProgrammer object
 
   @Override
+  public String toString() {
+    String result = super.toString();
+    result += String.format("\ngross sales: $%,.2f; commission rate: %.2f",
+            getGrossSales(), getCommissionRate());
+    return result;
+  }
 
   //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.
   //START

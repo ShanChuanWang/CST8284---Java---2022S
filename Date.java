@@ -24,7 +24,6 @@ public class Date {
      "Date object constructor for date %s%n", this);
  }
 
-
  // TO DO: COMPLETE THIS PORTION OF THE CODE (add get methods)!!!!!!!
  //START
  //INSERT CODE
@@ -45,9 +44,13 @@ public class Date {
  // START
  //INSERT CODE
  //END
+
+
+
  @Override
  public String toString() {
-  return ( + "l"  );
+  String result= getMonth() + "/" + getYear();
+  return result;
  }
 }
 

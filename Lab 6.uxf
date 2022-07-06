@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>70</y>
+      <w>720</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>/Programmer/
+--
+-firstName: String
+-lastName: String
+-socialSecurityNumber: String
+--
++Programmer(firstName: String, lastName: String, socialSecurityNumber: String, month: int, year: int)
++toString(): String
+/+earnings(): double/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>400</y>
+      <w>280</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>SalariedProgrammer
+--
+
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>190</y>
+      <w>180</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>640</y>
+      <w>290</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>BasePlusCommissionProgrammer
+--
+
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>520</x>
+      <y>400</y>
+      <w>280</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>CommissionProgrammer
+--
+
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>650</y>
+      <w>280</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Date
+--
+
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>660</x>
+      <y>560</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>860</x>
+      <y>400</y>
+      <w>280</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>HourlyProgrammer
+--
+
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>190</y>
+      <w>40</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>960</x>
+      <y>190</y>
+      <w>50</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;210.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1110</x>
+      <y>150</y>
+      <w>280</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>MyPaySystemTest
+--
+
+--
+_main(args: String[]): void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

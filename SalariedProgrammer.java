@@ -46,7 +46,12 @@ public class SalariedProgrammer extends Programmer  {
 
   //return String representation of SalariedProgrammer object
   @Override
-
+  public String toString() {
+    String result = "salaried programmer: ";
+    result += super.toString();
+    result += String.format("\nweekly salary: $%.2f", getWeeklySalary());
+    return result;
+  }
   //TO DO: COMEPLETE THIS PORTION. Format your solution according to sample output.
   //START
   // INSERT YOUR CODE

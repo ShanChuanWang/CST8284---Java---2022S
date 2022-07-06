@@ -8,7 +8,7 @@ public abstract class Programmer {
     private final String firstName;
     private final String lastName;
     private final String socialSecurityNumber;
-    private String birthDate;
+    private final Date birthDate;
 
     //constructor
     public Programmer(String firstName, String lastName,
@@ -16,7 +16,7 @@ public abstract class Programmer {
     this.firstName = firstName;
     this.lastName = lastName;
     this.socialSecurityNumber = socialSecurityNumber;
-    birthDate = month + "/" + year;
+    birthDate = new Date(month, year);
     }
 
     //return first name
@@ -40,8 +40,7 @@ public abstract class Programmer {
     //return birth date
     //TO DO: INSERT YOUR CODE HERE
 
-
-    public String getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
