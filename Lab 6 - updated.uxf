@@ -58,9 +58,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>230</x>
-      <y>460</y>
-      <w>695</w>
+      <x>465</x>
+      <y>690</y>
+      <w>655</w>
       <h>85</h>
     </coordinates>
     <panel_attributes>BasePlusCommissionProgrammer
@@ -77,9 +77,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>235</x>
-      <y>270</y>
-      <w>620</w>
+      <x>505</x>
+      <y>535</y>
+      <w>575</w>
       <h>105</h>
     </coordinates>
     <panel_attributes>CommissionProgrammer
@@ -99,9 +99,9 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>865</x>
-      <y>25</y>
-      <w>170</w>
+      <x>875</x>
+      <y>345</y>
+      <w>140</w>
       <h>80</h>
     </coordinates>
     <panel_attributes>Date
@@ -119,19 +119,19 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>570</x>
-      <y>370</y>
+      <x>795</x>
+      <y>635</y>
       <w>15</w>
-      <h>100</h>
+      <h>65</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>590</x>
-      <y>160</y>
+      <x>70</x>
+      <y>275</y>
       <w>495</w>
       <h>95</h>
     </coordinates>
@@ -152,30 +152,30 @@
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>535</x>
+      <x>770</x>
       <y>105</y>
-      <w>15</w>
-      <h>175</h>
+      <w>20</w>
+      <h>440</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;330.0</additional_attributes>
+    <additional_attributes>10.0;10.0;20.0;860.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
+      <x>495</x>
       <y>105</y>
       <w>15</w>
-      <h>65</h>
+      <h>180</h>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;340.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
-      <y>15</y>
+      <x>875</x>
+      <y>125</y>
       <w>140</w>
       <h>80</h>
     </coordinates>
@@ -185,5 +185,53 @@
 --
 _main(args: String[]): void_</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>240</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>MyPaySystemTest2
+--
+
+--
+_main(args: String[]): void_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>265</x>
+      <y>405</y>
+      <w>495</w>
+      <h>105</h>
+    </coordinates>
+    <panel_attributes>ActionProgrammer
+--
+-wage: double
+-pieces: int
+--
++ActionProgrammer(firstName: String, lastName: String, socialSecurityNumber: String, month: int, year: int, wage: double, pieces: int)
++getWage(): double
++setWage(wage: double): void
++getPieces(): int
++setPieces(pieces: int): viod
++earnings(): doulbe
++toString(): String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>620</x>
+      <y>105</y>
+      <w>15</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;600.0</additional_attributes>
   </element>
 </diagram>
