@@ -84,7 +84,7 @@ public class MyPaySystemTest2 {
              * to determine if this is the month of the programmer's birthday, add $500 to his salary
              * otherwise just state what this programmer currently earned.
              */
-            if (month == currentProgrammer.getBirthDate()) {
+            if (month == currentProgrammer.getBirthDate().getMonth()) {
                 System.out.printf("earned: $%,.2f plus $500 birthday bonus\n", currentProgrammer.earnings());
             } else {
                 System.out.printf("earned: $%,.2f\n", currentProgrammer.earnings());
