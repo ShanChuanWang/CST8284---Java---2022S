@@ -1,0 +1,36 @@
+
+Payment for Invoices and Programmers are processed polymorphically:
+
+invoice: 
+part number: 22776 (steering) 
+quantity: 3 
+price per item: $300.00 
+payment due: $900.00
+
+invoice: 
+part number: 33442 (cruise) 
+quantity: 5 
+price per item: $90.99 
+payment due: $454.95
+
+salaried Programmer: Chioma Chidimma
+social security number: 345-67-8901
+weekly salary: $320.00 
+payment due: $320.00
+
+hourly Programmer: Cheng Lui
+social security number: 234-56-7890
+hourly wage: $18.95; hours worked: 40.00 
+payment due: $758.00
+
+commission programmer: Matthew Goodman
+social security number: 123-45-6789
+gross sales: $16,500.00; commission rate: 0.44 
+payment due: $7,260.00
+
+base-plus commission programmer: Ramjeet Patel
+social security number: 102-34-5678
+gross sales: $1,200.00; commission rate: 0.04; base salary: $720.00 
+new base salary with 10% increase is: $792.00
+payment due: $840.00
+
